@@ -37,8 +37,7 @@ HANGMAN_PICS = ['''
   / \  |
       ===''']
 
-words = 'monkey zebra dog cat swan ball pen fox panda yellow purple rose outdoor computer spider smile lemon apple work department logic'.split()
-
+from words import word_list
 
 def check_win(word, guessed_letters):
     for letter in word:
@@ -57,8 +56,7 @@ def print_word(word, guessed_letters):
 
 
 def main():
-    chosen_word = random.choice(words)
-
+    chosen_word = random.choice(word_list)
     guessed_letters = []
     numattempts = 7
     i = 1
